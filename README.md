@@ -101,8 +101,8 @@ graph TD
 
 1.  **Clone the Repository**
     ```bash
-    git clone https://github.com/dhruvin6122/nexora.git
-    cd nexora
+    git clone https://github.com/dhruvin6122/Nexora_Buisness_analytic_platform.git
+    cd Nexora_Buisness_analytic_platform
     ```
 
 2.  **Install Dependencies**
