@@ -36,19 +36,19 @@ The application follows a **Client-Server Architecture**, separating the UI logi
 
 ```mermaid
 graph TD
-    User[Business User] -->|HTTP/HTTPS| FE[Frontend (Streamlit)]
-    FE -->|REST API| BE[Backend (FastAPI)]
+    User["Business User"] -->|"HTTP/HTTPS"| FE["Frontend (Streamlit)"]
+    FE -->|"REST API"| BE["Backend (FastAPI)"]
     
     subgraph "Backend Core"
-        BE -->|Auth| Auth[Auth Service]
-        BE -->|Router| Agent[AI Agent (LangChain)]
-        Agent -->|LLM Calls| OpenAI[OpenAI GPT-4o]
-        Agent -->|SQL Execution| DB[(PostgreSQL Database)]
+        BE -->|Auth| Auth["Auth Service"]
+        BE -->|Router| Agent["AI Agent (LangChain)"]
+        Agent -->|"LLM Calls"| OpenAI["OpenAI GPT-4o"]
+        Agent -->|"SQL Execution"| DB[("PostgreSQL Database")]
     end
     
-    DB -->|Result Sets| Agent
-    Agent -->|Natural Language + Data| BE
-    BE -->|JSON Response| FE
+    DB -->|"Result Sets"| Agent
+    Agent -->|"Natural Language + Data"| BE
+    BE -->|"JSON Response"| FE
 ```
 
 ### Core Components
