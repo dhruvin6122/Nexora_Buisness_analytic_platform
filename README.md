@@ -34,6 +34,14 @@ Nexora solves these challenges by providing:
 
 The application follows a **Client-Server Architecture**, separating the UI logic from the core reasoning engine.
 
+### Data Flow Overview
+
+1.  **User Interaction**: Business user asks a question on the **Streamlit Frontend**.
+2.  **API Gateway**: Frontend sends HTTP request to the **FastAPI Backend**.
+3.  **Authentication**: Backend validates request via **Auth Service**.
+4.  **Reasoning**: **LangChain Agent** constructs a SQL query using **GPT-4o**.
+5.  **Execution**: Agent safely executes the query on the **PostgreSQL Database**.
+6.  **Response**: Results are formatted and sent back to the UI for display.
 
 ### Core Components
 
